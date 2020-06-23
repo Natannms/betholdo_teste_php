@@ -1,0 +1,22 @@
+<form action="idex.php" method="post">   tag form contem atributo action com caminho de arquivo errado,
+que deveria ser Index.php
+
+$address = (get_address($cp)); variavel $cp passada como parametro dentro do metodo get_address() é indefinida
+visto que nao existe variavel denominada $cp mas sim uma variavel denominada $cep
+
+echo "Rua: $address->logradoro<br>";
+ao selecionar parte do objeto retornado pela requisição chamado "logradouro",
+foi denominado de forma errada como "logradoro".
+
+echo "Rua: $addres->logradoro<br>";
+variavel $addres informada é indefinida
+visto que nao existe variavel denominada $addres mas sim uma variavel denominada $address
+
+echo "Estado: $adress->uf<br>";
+variavel $adress informada é indefinida
+visto que nao existe variavel denominada $adress mas sim uma variavel denominada $address
+
+
+ $url = "http://viacep.com.br/ws$cep/xml/";
+variavel $cep nao foi conctenada com o restante da string dentro da variavel url corretamente, é necessário usar ".$nome_variavel." para concatenar adequadamente, além da ausencia do caracter /
+após "ws" dentro da variavel url
